@@ -17,8 +17,16 @@ replay = "latest_ai_development.main:replay"
 test = "latest_ai_development.main:test"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "uv"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = [
+    "src/latest_ai_development/*.py",
+    "src/latest_ai_development/config/*",
+    "src/latest_ai_development/tools/*"
+]
 
 [tool.crewai]
 type = "crew"
+entrypoint = "src.latest_ai_development.crew:LatestAiDevelopment"

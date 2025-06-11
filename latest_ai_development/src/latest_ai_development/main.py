@@ -4,8 +4,8 @@ import warnings
 
 from datetime import datetime
 
-from latest_ai_development.crew import LatestAiDevelopment
-
+# from latest_ai_development.src.latest_ai_development.crew import LatestAiDevelopment
+from src.latest_ai_development.crew import LatestAiDevelopment
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 # This main file is intended to be a way for you to run your
